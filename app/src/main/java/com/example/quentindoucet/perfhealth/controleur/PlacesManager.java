@@ -61,6 +61,12 @@ public class PlacesManager {
     public void addPlace(Place place) {
         list.add(place);
         myRef.child("lieux").setValue(list);
+
+    }
+
+    public void updatePlace(int id, Place newP) {
+        list.set(id, newP);
+        myRef.child("lieux").setValue(list);
     }
 
     public DatabaseReference getLieux() {

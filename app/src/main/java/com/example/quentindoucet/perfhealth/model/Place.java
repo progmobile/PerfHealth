@@ -2,11 +2,13 @@ package com.example.quentindoucet.perfhealth.model;
 
 import com.google.android.gms.maps.model.LatLng;
 
+import java.io.Serializable;
+
 /**
  * Created by alexis on 02/11/2017.
  */
 
-public class Place {
+public class Place implements Serializable {
 
     private String name;
     private String action;
@@ -70,7 +72,7 @@ public class Place {
         this.location = location;
     }
 
-    public static class Position {
+    public static class Position implements Serializable {
         private double latitude;
         private double longitude;
 

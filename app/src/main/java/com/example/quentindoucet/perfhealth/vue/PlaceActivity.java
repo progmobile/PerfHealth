@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -43,7 +44,7 @@ public class PlaceActivity extends AppCompatActivity {
 
         Log.wtf("places list", placesManager.getPlaces().toString());
 
-        ListView placeList = findViewById(R.id.placeList);
+        final ListView placeList = findViewById(R.id.placeList);
         adapter = new FirebaseListAdapter<Place>(PlaceActivity.this, Place.class, R.layout.item_place, placesManager.getLieux()) {
 
             @Override
@@ -57,24 +58,20 @@ public class PlaceActivity extends AppCompatActivity {
 
             }
         };
-        /*adapter = new ArrayAdapter<Place>(PlaceActivity.this,R.id.itemPlace, placesManager.getPlaces()){
-            @NonNull
+        placeList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-                LayoutInflater inflater = (LayoutInflater) PlaceActivity.this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-                View rowView = inflater.inflate(R.layout.item_place, parent, false);
-                TextView tvPlace =  rowView.findViewById(R.id.tvPlace);
-                TextView tvAction =  rowView.findViewById(R.id.tvAction);
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                tvPlace.setText(placesManager.getPlaces().get(position).getName());
-                tvAction.setText(placesManager.getPlaces().get(position).getAction());
+                Intent intent = new Intent(PlaceActivity.this, UpdatePlaceActivity.class);
+                intent.putExtra("place", (Place) placeList.getItemAtPosition(position));
+                intent.putExtra("id", position);
+                startActivity(intent);
 
-                return rowView;
             }
-
-        };*/
+        });
 
         placeList.setAdapter(adapter);
+
 
     }
 

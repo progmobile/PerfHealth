@@ -27,7 +27,7 @@
             android:label="@string/title_activity_place"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".vue.NewPlaceActivity" />
-
+        <activity android:name=".vue.UpdatePlaceActivity" />
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyBatLsjMBeQn4X-SuJ2CZYoPcBEBr-bwHU" />
