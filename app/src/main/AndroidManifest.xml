@@ -23,6 +23,15 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".vue.ModulesActivity"
+            android:label="Modules" />
+        <activity
+            android:name=".vue.LaverMainActivity"
+            android:label="Selaverlesmains" />
+        <activity
+            android:name=".vue.LaverDentsActivity"
+            android:label="Selaverlesdents"></activity>
+        <activity
             android:name=".vue.PlaceActivity"
             android:label="@string/title_activity_place"
             android:theme="@style/AppTheme.NoActionBar" />
