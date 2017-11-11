@@ -83,7 +83,6 @@ public class ActionDataSource {
         action.setId(cursor.getInt(0));
         action.setNomAction(cursor.getString(1));
         action.setDescription(cursor.getString(2));
-        action.setDateAction(cursor.getString(3));
 
         return action;
     }

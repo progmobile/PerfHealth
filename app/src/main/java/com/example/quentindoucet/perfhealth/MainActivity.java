@@ -57,10 +57,6 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-
-        ActionDataSource datasource = new ActionDataSource(this);
-        Action a = datasource.createAction("Se laver les mains", "un lavage de 30s","12/12/2017 12/12PH");
-        Action aa = datasource.createAction("Se brosser les dents", "Un brossage de 3min","12/12/2017 12/12PH");
     }
 
     @Override

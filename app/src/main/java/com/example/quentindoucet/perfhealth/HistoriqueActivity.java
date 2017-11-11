@@ -8,6 +8,7 @@ import android.widget.SimpleCursorAdapter;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class HistoriqueActivity extends AppCompatActivity {
@@ -16,7 +17,6 @@ public class HistoriqueActivity extends AppCompatActivity {
     private static final String TAG = "HISTORIQUE_ACTIVITY";
 
 
-    private ActionDataSource actionDSO;
 
 
     @Override
@@ -25,17 +25,13 @@ public class HistoriqueActivity extends AppCompatActivity {
         setContentView(R.layout.activity_historique);
 
 
-
-        actionDSO = new ActionDataSource(this);
-        actionDSO.open();
-
-        List<Action> listeAction = actionDSO.getAllAction();
-
-
-        ArrayList<Action> listA = new ArrayList(listeAction);
-
-
         Personne p = new Personne(1,"DOUCET","Quentin",23,"M",187,80);
+        Action a = new Action(1,"Se laver les mains", "un lavage de 30s",new Date());
+        Action aa = new Action(1,"Se brosser les dents", "Un brossage de 3min",new Date());
+
+        ArrayList<Action> listA = new ArrayList();
+        listA.add(a);
+        listA.add(aa);
 
         Historique h = new Historique(1,listA,p);
 

@@ -12,13 +12,13 @@ public class Action {
     private int id;
     private String nomAction;
     private String description;
-    private String dateAction;
+    private Date dateAction;
 
     public Action(){
 
     }
 
-    public Action(int id, String nomAction, String description, String dateAction) {
+    public Action(int id, String nomAction, String description, Date dateAction) {
         this.id = id;
         this.nomAction = nomAction;
         this.description = description;
@@ -49,11 +49,11 @@ public class Action {
         this.description = description;
     }
 
-    public String getDateAction() {
+    public Date getDateAction() {
         return dateAction;
     }
 
-    public void setDateAction(String dateAction) {
+    public void setDateAction(Date dateAction) {
         this.dateAction = dateAction;
     }
 }
