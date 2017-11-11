@@ -28,9 +28,15 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".vue.NewPlaceActivity" />
         <activity android:name=".vue.UpdatePlaceActivity" />
+
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyBatLsjMBeQn4X-SuJ2CZYoPcBEBr-bwHU" />
+
+        <service
+            android:name=".service.PlaceService"
+            android:enabled="true"
+            android:exported="true"></service>
     </application>
 
 </manifest>

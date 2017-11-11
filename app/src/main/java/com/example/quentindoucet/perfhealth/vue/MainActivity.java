@@ -15,9 +15,12 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.example.quentindoucet.perfhealth.R;
+import com.example.quentindoucet.perfhealth.service.PlaceService;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    private Intent servicePlace;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +46,17 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        //service de localisation
+        servicePlace = new Intent(this, PlaceService.class);
+        startService(servicePlace);
+
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        stopService(servicePlace);
     }
 
     @Override

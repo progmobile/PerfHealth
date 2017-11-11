@@ -5,7 +5,8 @@ import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
+import android.view.ContextMenu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListAdapter;
@@ -42,7 +43,6 @@ public class PlaceActivity extends AppCompatActivity {
             }
         });
 
-        Log.wtf("places list", placesManager.getPlaces().toString());
 
         final ListView placeList = findViewById(R.id.placeList);
         adapter = new FirebaseListAdapter<Place>(PlaceActivity.this, Place.class, R.layout.item_place, placesManager.getLieux()) {
@@ -72,8 +72,29 @@ public class PlaceActivity extends AppCompatActivity {
 
         placeList.setAdapter(adapter);
 
-
+        registerForContextMenu(placeList);
     }
 
+    @Override
+    public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
 
+        menu.add(0, v.getId(), 0, "Supprimer");
+
+        super.onCreateContextMenu(menu, v, menuInfo);
+    }
+
+    @Override
+    public boolean onContextItemSelected(MenuItem item) {
+
+        AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
+
+        if (item.getTitle() == "Supprimer") {
+
+            placesManager.removePlace(info.position);
+
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
