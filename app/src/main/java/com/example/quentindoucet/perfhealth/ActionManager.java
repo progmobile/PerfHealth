@@ -1,34 +1,34 @@
 package com.example.quentindoucet.perfhealth;
 
-import java.util.ArrayList;
-
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.ArrayList;
+
 /**
  * Created by quentindoucet on 11/11/2017.
  */
 
-public class HistoriqueManager {
+public class ActionManager {
 
     private FirebaseDatabase database;
     private DatabaseReference myRef;
-    private ArrayList<Historique> listHisto;
+    private ArrayList<Action> listAction;
     private ChildEventListener childEventListener;
 
-    public HistoriqueManager() {
+    public ActionManager() {
         database = FirebaseDatabase.getInstance();
         myRef = database.getReference();
 
 
-        listHisto = new ArrayList<Historique>();
+        listAction = new ArrayList<Action>();
         childEventListener = new ChildEventListener() {
             @Override
             public void onChildAdded(DataSnapshot dataSnapshot, String s) {
-                listHisto.add(dataSnapshot.getValue(Historique.class));
+                listAction.add(dataSnapshot.getValue(Action.class));
             }
 
             @Override
@@ -51,31 +51,31 @@ public class HistoriqueManager {
 
             }
         };
-        myRef.child("histo").addChildEventListener(childEventListener);
+        myRef.child("action").addChildEventListener(childEventListener);
     }
 
-    public ArrayList<Historique> getPlaces() {
-        return listHisto;
+    public ArrayList<Action> getPlaces() {
+        return listAction;
     }
 
-    public void addHisto(Historique historique) {
-        listHisto.add(historique);
-        myRef.child("histo").setValue(listHisto);
+    public void addAction(Action action) {
+        listAction.add(action);
+        myRef.child("action").setValue(listAction);
 
     }
 
-    public void updateHisto(int id, Historique newH) {
-        listHisto.set(id, newH);
-        myRef.child("histo").setValue(listHisto);
+    public void updateAction(int id, Action newA) {
+        listAction.set(id, newA);
+        myRef.child("action").setValue(listAction);
     }
 
-    public void removeHisto(int id) {
-        listHisto.remove(id);
-        myRef.child("histo").setValue(listHisto);
+    public void removeAction(int id) {
+        listAction.remove(id);
+        myRef.child("action").setValue(listAction);
     }
 
-    public DatabaseReference getHisto() {
-        return myRef.child("histo");
+    public DatabaseReference getAction() {
+        return myRef.child("action");
     }
 
 }

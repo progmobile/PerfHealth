@@ -23,6 +23,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 public class MainActivity extends AppCompatActivity
@@ -56,6 +57,17 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+
+        Personne p = new Personne(1,"DOUCET","Quentin",23,"M",187,80);
+        Action a = new Action(1,"Se laver les mains", "un lavage de 30s",new Date());
+        Action aa = new Action(1,"Se brosser les dents", "Un brossage de 3min",new Date());
+
+        ArrayList<Action> listA = new ArrayList();
+        listA.add(a);
+        listA.add(aa);
+
+
 
     }
 
