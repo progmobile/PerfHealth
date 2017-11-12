@@ -20,17 +20,22 @@ import com.firebase.client.Firebase;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import com.firebase.ui.database.FirebaseListAdapter;
+
 
 public class HistoriqueActivity extends AppCompatActivity {
 
 
     private static final String TAG = "HISTORIQUE_ACTIVITY";
 
+    private ListView lv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_historique);
+
+        lv = (ListView) findViewById(R.id.listViewHisto);
 /*
         Personne p = new Personne(1,"DOUCET","Quentin",23,"M",187,80);
         Action a = new Action(1,"Se laver les mains", "un lavage de 30s",new Date());
@@ -51,14 +56,23 @@ public class HistoriqueActivity extends AppCompatActivity {
         Historique h = new Historique(1,listA,p);
 
 
-        ListAdapter myAdapter = new com.firebase.ui.FirebaseListAdapter<Action>(this,String.class,android.R.layout.simple_list_item_1,actionManager.getAction()) {
+        ListAdapter myAdapter = new FirebaseListAdapter<Action>(this,Action.class,R.layout.row_item,actionManager.getAction()) {
+
             @Override
-            protected void populateView(View view, String s, int i) {
-                TextView text = (TextView) view.findViewById(android.R.id.text1);
-                text.setText(s);
+            protected void populateView(View view, Action s, int i) {
+                TextView text = (TextView) view.findViewById(R.id.textViewCol1);
+                text.setText(s.getNomAction());
+                TextView text1 = (TextView) view.findViewById(R.id.textViewCol2);
+                text1.setText(s.getDescription());
+                TextView date = (TextView) view.findViewById(R.id.textViewDate);
+                SimpleDateFormat simpleDateFormatHr = new SimpleDateFormat("h:mm a");
+                String hrStr = simpleDateFormatHr.format(s.getDateAction());
+                SimpleDateFormat simpleDateFormatDate = new SimpleDateFormat("dd/MM/yyyy");
+                String dateStr = simpleDateFormatDate.format(s.getDateAction());
+                date.setText(dateStr + " "+ hrStr);
             }
         };
-        final ListView lv = (ListView) findViewById(R.id.listView);
+
         lv.setAdapter(myAdapter);
 
         /*
