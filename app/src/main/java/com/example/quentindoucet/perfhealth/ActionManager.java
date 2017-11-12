@@ -61,7 +61,6 @@ public class ActionManager {
     public void addAction(Action action) {
         listAction.add(action);
         myRef.child("action").setValue(listAction);
-
     }
 
     public void updateAction(int id, Action newA) {

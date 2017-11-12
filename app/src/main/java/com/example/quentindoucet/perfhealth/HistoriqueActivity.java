@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
+import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -36,8 +37,11 @@ public class HistoriqueActivity extends AppCompatActivity {
 
         ActionManager actionManager = new ActionManager();
         Personne p = new Personne(1,"DOUCET","Quentin",23,"M",187,80);
-
+        actionManager.getAction();
         ArrayList<Action> listA = actionManager.getListAction();
+
+        Toast toast = Toast.makeText(getBaseContext(), listA.get(0).toString(), Toast.LENGTH_LONG);
+        toast.show();
         Historique h = new Historique(1,listA,p);
 
         // Définition des colonnes
