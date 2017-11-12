@@ -1,10 +1,13 @@
 package com.example.quentindoucet.perfhealth;
 
+import android.util.Log;
+
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
@@ -19,6 +22,7 @@ public class ActionManager {
     private ArrayList<Action> listAction;
     private ChildEventListener childEventListener;
 
+
     public ActionManager() {
         database = FirebaseDatabase.getInstance();
         myRef = database.getReference();
@@ -29,6 +33,7 @@ public class ActionManager {
             @Override
             public void onChildAdded(DataSnapshot dataSnapshot, String s) {
                 listAction.add(dataSnapshot.getValue(Action.class));
+                Log.e("Donnee", dataSnapshot.getValue(Action.class).toString());
             }
 
             @Override
@@ -52,6 +57,7 @@ public class ActionManager {
             }
         };
         myRef.child("action").addChildEventListener(childEventListener);
+
     }
 
     public ArrayList<Action> getListAction() {

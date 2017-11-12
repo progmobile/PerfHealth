@@ -25,6 +25,16 @@ public class Action {
         this.dateAction = dateAction;
     }
 
+    @Override
+    public String toString() {
+        return "Action{" +
+                "id=" + id +
+                ", nomAction='" + nomAction + '\'' +
+                ", description='" + description + '\'' +
+                ", dateAction=" + dateAction +
+                '}';
+    }
+
     public int getId() {
         return id;
     }
