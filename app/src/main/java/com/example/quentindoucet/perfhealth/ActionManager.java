@@ -54,7 +54,7 @@ public class ActionManager {
         myRef.child("action").addChildEventListener(childEventListener);
     }
 
-    public ArrayList<Action> getPlaces() {
+    public ArrayList<Action> getListAction() {
         return listAction;
     }
 

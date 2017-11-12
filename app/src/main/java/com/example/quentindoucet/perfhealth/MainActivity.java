@@ -63,9 +63,11 @@ public class MainActivity extends AppCompatActivity
         Action a = new Action(1,"Se laver les mains", "un lavage de 30s",new Date());
         Action aa = new Action(1,"Se brosser les dents", "Un brossage de 3min",new Date());
 
-        ArrayList<Action> listA = new ArrayList();
-        listA.add(a);
-        listA.add(aa);
+
+        ActionManager actionManager = new ActionManager();
+        actionManager.addAction(a);
+        actionManager.addAction(aa);
+
 
 
 
