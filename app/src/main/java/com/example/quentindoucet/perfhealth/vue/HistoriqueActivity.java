@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Adapter;
+import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 import android.widget.TextView;
@@ -50,7 +51,7 @@ public class HistoriqueActivity extends AppCompatActivity {
         Historique h = new Historique(1,listA,p);
 
 
-        Adapter myAdapter = new FirebaseListAdapter<Action>(this,String.class,android.R.layout.simple_list_item_1,mRef) {
+        ListAdapter myAdapter = new com.firebase.ui.FirebaseListAdapter<Action>(this,String.class,android.R.layout.simple_list_item_1,actionManager.getAction()) {
             @Override
             protected void populateView(View view, String s, int i) {
                 TextView text = (TextView) view.findViewById(android.R.id.text1);
