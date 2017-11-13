@@ -50,10 +50,10 @@ public class HistoriqueActivity extends AppCompatActivity {
 
         Personne p = new Personne(1,"DOUCET","Quentin",23,"M",187,80);
 
-        ArrayList<Action> listA = actionManager.getListAction();
+        //ArrayList<Action> listA = actionManager.getListAction();
 
-        Log.e("Get Data", listA.size()+"");
-        Historique h = new Historique(1,listA,p);
+        //Log.e("Get Data", listA.size()+"");
+        Historique h = new Historique(1,null,p);
 
 
         ListAdapter myAdapter = new FirebaseListAdapter<Action>(this,Action.class,R.layout.row_item,actionManager.getAction()) {
