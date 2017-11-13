@@ -24,9 +24,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+<<<<<<< HEAD
         <activity android:name=".vue.HistoriqueActivity" />
         <activity android:name=".vue.SignInActivity" />
         <activity android:name=".vue.AccountActivity"></activity>
+=======
+
+        <activity android:name=".Repeating_activity"/>
+
+        <receiver android:name=".Notification_receiver"/>
+
+>>>>>>> majid
     </application>
+
+
 
 </manifest>
