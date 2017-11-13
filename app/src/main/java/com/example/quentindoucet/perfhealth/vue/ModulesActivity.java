@@ -26,5 +26,10 @@ public class ModulesActivity extends AppCompatActivity {
         startActivity(intentLaverDents);
     }
 
+    public void ajouterModule(View view){
+
+
+    }
+
 
 }

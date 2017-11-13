@@ -1,30 +1,18 @@
 package com.example.quentindoucet.perfhealth.vue;
 
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.CheckBox;
-import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.quentindoucet.perfhealth.R;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-
-import java.util.ArrayList;
+import com.example.quentindoucet.perfhealth.controleur.HandManager;
+import com.example.quentindoucet.perfhealth.model.Hand;
 
 public class LaverMainActivity extends AppCompatActivity {
 
-    // Write a message to the database
-    FirebaseDatabase database = FirebaseDatabase.getInstance();
-    //DatabaseReference mRootRef = database.getInstance().getReference();
-    //DatabaseReference childd = mRootRef.child("LaverMains");
-    DatabaseReference myRefFrequence = database.getReference("FrequenceMains");
-    DatabaseReference myRefTemps = database.getReference("TempsMains");
-    DatabaseReference myRefEau = database.getReference("EauMains");
-    //DatabaseReference myRefLavageMains = database.getReference("LavageMains");
-
-    ArrayList<String> selection = new ArrayList<String>();
-    TextView final_text;
     CheckBox lcheckbox1;
     CheckBox lcheckbox2;
     CheckBox lcheckbox3;
@@ -34,6 +22,11 @@ public class LaverMainActivity extends AppCompatActivity {
     CheckBox lcheckbox7;
     CheckBox lcheckbox8;
     CheckBox lcheckbox9;
+    FloatingActionButton lButtonSend;
+    private String frequence;
+    private String temps;
+    private String eau;
+    private Hand hand = new Hand();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,25 +41,19 @@ public class LaverMainActivity extends AppCompatActivity {
         lcheckbox7 = (CheckBox)findViewById(R.id.checkBox7);
         lcheckbox8 = (CheckBox)findViewById(R.id.checkBox8);
         lcheckbox9 = (CheckBox)findViewById(R.id.checkBox9);
-       // myRefLavageMains.child("Frequence");
-        //myRefLavageMains.child("Temps");
-        //myRefLavageMains.child("Eau");
+        lButtonSend = (FloatingActionButton) findViewById(R.id.floatingActionButton);
     }
 
 
 
     public void selectItem(View view){
 
-
-
         boolean checked = ((CheckBox) view).isChecked();
         switch (view.getId())
         {
             case R.id.checkBox:
                 if(checked){
-                    //selection.add("1 fois par jour ");
-                    String temp = lcheckbox1.getText().toString().trim();
-                    myRefFrequence.setValue(temp);
+                    hand.setFrequence(lcheckbox1.getText().toString().trim());
                     lcheckbox2.setEnabled(false);
                     lcheckbox3.setEnabled(false);
 
@@ -79,9 +66,7 @@ public class LaverMainActivity extends AppCompatActivity {
                     break;
             case R.id.checkBox2:
                 if(checked){
-                    //selection.add("2 fois par jour ");
-                    String temp = lcheckbox2.getText().toString().trim();
-                    myRefFrequence.setValue(temp);
+                    hand.setFrequence(lcheckbox2.getText().toString().trim());
                     lcheckbox1.setEnabled(false);
                     lcheckbox3.setEnabled(false);
                 }
@@ -93,9 +78,7 @@ public class LaverMainActivity extends AppCompatActivity {
                 break;
             case R.id.checkBox3:
                 if(checked){
-                    //selection.add("3 fois par jour ");
-                    String temp = lcheckbox3.getText().toString().trim();
-                    myRefFrequence.setValue(temp);
+                    hand.setFrequence(lcheckbox3.getText().toString().trim());
                     lcheckbox2.setEnabled(false);
                     lcheckbox1.setEnabled(false);
                 }
@@ -107,9 +90,7 @@ public class LaverMainActivity extends AppCompatActivity {
                 break;
             case R.id.checkBox4:
                 if(checked){
-                    //selection.add("3 fois par jour ");
-                    String temp = lcheckbox4.getText().toString().trim();
-                    myRefTemps.setValue(temp);
+                    hand.setTemps(lcheckbox4.getText().toString().trim());
                     lcheckbox5.setEnabled(false);
                     lcheckbox6.setEnabled(false);
                 }
@@ -121,9 +102,7 @@ public class LaverMainActivity extends AppCompatActivity {
                 break;
             case R.id.checkBox5:
                 if(checked){
-                    //selection.add("3 fois par jour ");
-                    String temp = lcheckbox5.getText().toString().trim();
-                    myRefTemps.setValue(temp);
+                    hand.setTemps(lcheckbox5.getText().toString().trim());
                     lcheckbox4.setEnabled(false);
                     lcheckbox6.setEnabled(false);
                 }
@@ -135,9 +114,7 @@ public class LaverMainActivity extends AppCompatActivity {
                 break;
             case R.id.checkBox6:
                 if(checked){
-                    //selection.add("3 fois par jour ");
-                    String temp = lcheckbox6.getText().toString().trim();
-                    myRefTemps.setValue(temp);
+                    hand.setTemps(lcheckbox6.getText().toString().trim());
                     lcheckbox4.setEnabled(false);
                     lcheckbox5.setEnabled(false);
                 }
@@ -149,9 +126,7 @@ public class LaverMainActivity extends AppCompatActivity {
                 break;
             case R.id.checkBox7:
                 if(checked){
-                    //selection.add("3 fois par jour ");
-                    String temp = lcheckbox7.getText().toString().trim();
-                    myRefEau.setValue(temp);
+                    hand.setEau(lcheckbox7.getText().toString().trim());
                     lcheckbox8.setEnabled(false);
                     lcheckbox9.setEnabled(false);
                 }
@@ -163,9 +138,7 @@ public class LaverMainActivity extends AppCompatActivity {
                 break;
             case R.id.checkBox8:
                 if(checked){
-                    //selection.add("3 fois par jour ");
-                    String temp = lcheckbox8.getText().toString().trim();
-                   // myRefEau.setValue(temp);
+                    hand.setEau(lcheckbox8.getText().toString().trim());
                     lcheckbox7.setEnabled(false);
                     lcheckbox9.setEnabled(false);
                 }
@@ -177,9 +150,7 @@ public class LaverMainActivity extends AppCompatActivity {
                 break;
             case R.id.checkBox9:
                 if(checked){
-                    //selection.add("3 fois par jour ");
-                    String temp = lcheckbox9.getText().toString().trim();
-                    myRefEau.setValue(temp);
+                    hand.setEau(lcheckbox9.getText().toString().trim());
                     lcheckbox7.setEnabled(false);
                     lcheckbox8.setEnabled(false);
                 }
@@ -195,7 +166,22 @@ public class LaverMainActivity extends AppCompatActivity {
 
     public void sendLavageMains(View view){
 
-        //selectItem(view);
+        FloatingActionButton btn = (FloatingActionButton) view;
+
+        if(lButtonSend.equals(btn)){
+            HandManager mainsManager = new HandManager();
+            int i = mainsManager.getListeHand().size();
+
+            mainsManager.addHand(hand);
+            if(i < mainsManager.getListeHand().size()){
+                Toast toast = Toast.makeText(getApplicationContext(), "Ajouté", Toast.LENGTH_LONG);
+                toast.show();
+            }else {
+                Toast toast = Toast.makeText(getApplicationContext(), "Pas d'ajout", Toast.LENGTH_LONG);
+                toast.show();
+            }
+
+        }
     }
 
 }

@@ -20,7 +20,7 @@
             android:layout_toEndOf="@+id/btnstop"
             android:layout_toRightOf="@+id/btnstop"
             android:clickable="true"
-            android:onClick="sendLavageMains"
+            android:onClick="sendLavageDents"
             app:backgroundTint="@color/colorPrimary"
             app:fabSize="normal"
             app:srcCompat="@drawable/ic_menu_send" />

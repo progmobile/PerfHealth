@@ -2,30 +2,31 @@ package com.example.quentindoucet.perfhealth.vue;
 
 import android.os.Bundle;
 import android.os.SystemClock;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.Chronometer;
+import android.widget.Toast;
 
 import com.example.quentindoucet.perfhealth.R;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
+import com.example.quentindoucet.perfhealth.controleur.TeethManager;
+import com.example.quentindoucet.perfhealth.model.Teeth;
 
 public class LaverDentsActivity extends AppCompatActivity {
 
-    FirebaseDatabase database = FirebaseDatabase.getInstance();
-    DatabaseReference myRefFrequence = database.getReference("FrequenceDents");
-    DatabaseReference myRefTemps = database.getReference("TempsDents");
     Chronometer chronometer;
-
     CheckBox lcheckbox1;
     CheckBox lcheckbox2;
     CheckBox lcheckbox3;
     CheckBox lcheckbox4;
     CheckBox lcheckbox5;
     CheckBox lcheckbox6;
-
+    FloatingActionButton lButtonSend;
+    private String frequence;
+    private String temps;
+    private Teeth teeth = new Teeth();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +39,7 @@ public class LaverDentsActivity extends AppCompatActivity {
         lcheckbox5 = (CheckBox)findViewById(R.id.checkBox5);
         lcheckbox6 = (CheckBox)findViewById(R.id.checkBox6);
         Button btn_start = (Button) findViewById(R.id.btnstart);
+        lButtonSend = (FloatingActionButton) findViewById(R.id.floatingActionButton);
 
 
         btn_start.setOnClickListener(new View.OnClickListener() {
@@ -70,8 +72,7 @@ public class LaverDentsActivity extends AppCompatActivity {
         {
             case R.id.checkBox:
                 if(checked){
-                    String temp = lcheckbox1.getText().toString().trim();
-                    myRefFrequence.setValue(temp);
+                    teeth.setFrequence(lcheckbox1.getText().toString().trim());
                     lcheckbox2.setEnabled(false);
                     lcheckbox3.setEnabled(false);
 
@@ -84,8 +85,7 @@ public class LaverDentsActivity extends AppCompatActivity {
                 break;
             case R.id.checkBox2:
                 if(checked){
-                    String temp = lcheckbox2.getText().toString().trim();
-                    myRefFrequence.setValue(temp);
+                    teeth.setFrequence(lcheckbox2.getText().toString().trim());
                     lcheckbox1.setEnabled(false);
                     lcheckbox3.setEnabled(false);
                 }
@@ -97,8 +97,7 @@ public class LaverDentsActivity extends AppCompatActivity {
                 break;
             case R.id.checkBox3:
                 if(checked){
-                    String temp = lcheckbox3.getText().toString().trim();
-                    myRefFrequence.setValue(temp);
+                    teeth.setFrequence(lcheckbox3.getText().toString().trim());
                     lcheckbox2.setEnabled(false);
                     lcheckbox1.setEnabled(false);
                 }
@@ -110,8 +109,7 @@ public class LaverDentsActivity extends AppCompatActivity {
                 break;
             case R.id.checkBox4:
                 if(checked){
-                    String temp = lcheckbox4.getText().toString().trim();
-                    myRefTemps.setValue(temp);
+                    teeth.setTemps(lcheckbox4.getText().toString().trim());
                     lcheckbox5.setEnabled(false);
                     lcheckbox6.setEnabled(false);
                 }
@@ -123,8 +121,7 @@ public class LaverDentsActivity extends AppCompatActivity {
                 break;
             case R.id.checkBox5:
                 if(checked){
-                    String temp = lcheckbox5.getText().toString().trim();
-                    myRefTemps.setValue(temp);
+                    teeth.setTemps(lcheckbox5.getText().toString().trim());
                     lcheckbox4.setEnabled(false);
                     lcheckbox6.setEnabled(false);
                 }
@@ -136,8 +133,7 @@ public class LaverDentsActivity extends AppCompatActivity {
                 break;
             case R.id.checkBox6:
                 if(checked){
-                    String temp = lcheckbox6.getText().toString().trim();
-                    myRefTemps.setValue(temp);
+                    teeth.setTemps(lcheckbox6.getText().toString().trim());
                     lcheckbox4.setEnabled(false);
                     lcheckbox5.setEnabled(false);
                 }
@@ -151,5 +147,24 @@ public class LaverDentsActivity extends AppCompatActivity {
 
         }
 
+    }
+    public void sendLavageDents(View view){
+
+        FloatingActionButton btn = (FloatingActionButton) view;
+
+        if(lButtonSend.equals(btn)){
+            TeethManager teethManager = new TeethManager();
+            int i = teethManager.getListeTeeth().size();
+
+            teethManager.addTeeth(teeth);
+            if(i < teethManager.getListeTeeth().size()){
+                Toast toast = Toast.makeText(getApplicationContext(), "Ajouté", Toast.LENGTH_LONG);
+                toast.show();
+            }else {
+                Toast toast = Toast.makeText(getApplicationContext(), "Pas d'ajout", Toast.LENGTH_LONG);
+                toast.show();
+            }
+
+        }
     }
 }
