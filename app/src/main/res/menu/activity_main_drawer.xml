@@ -5,7 +5,7 @@
 
     <group android:checkableBehavior="single">
         <item
-<<<<<<< HEAD
+
             android:id="@+id/nav_historique"
             android:icon="?android:attr/actionModeFindDrawable"
             android:title="Historique" />
@@ -13,9 +13,9 @@
             android:id="@+id/nav_connexion"
             android:icon="@drawable/googleg_standard_color_18"
             android:title="Connexion" />
-    </group>
 
-=======
+
+        <item
             android:id="@+id/nav_place"
             android:icon="@drawable/ic_menu_gallery"
             android:title="Lieux" />
@@ -26,5 +26,5 @@
     </group>
 
 
->>>>>>> benjamin
+
 </menu>

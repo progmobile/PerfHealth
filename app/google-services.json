@@ -1,35 +1,35 @@
 {
   "project_info": {
-    "project_number": "139941373279",
-    "firebase_url": "https://perfhealth-daf87.firebaseio.com",
-    "project_id": "perfhealth-daf87",
-    "storage_bucket": "perfhealth-daf87.appspot.com"
+    "project_number": "924867550183",
+    "firebase_url": "https://perfhealth-75f45.firebaseio.com",
+    "project_id": "perfhealth-75f45",
+    "storage_bucket": "perfhealth-75f45.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:139941373279:android:b56af54ebed9aa7b",
+        "mobilesdk_app_id": "1:924867550183:android:b56af54ebed9aa7b",
         "android_client_info": {
           "package_name": "com.example.quentindoucet.perfhealth"
         }
       },
       "oauth_client": [
         {
-          "client_id": "139941373279-6f880hs3kpb38d72q9pn5la8j973g5uo.apps.googleusercontent.com",
+          "client_id": "924867550183-5cq18dt662aembug0p7hjnbenqu2eb8r.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.example.quentindoucet.perfhealth",
-            "certificate_hash": "098dcf14bd5fe1bd85ce784013075b3dfc3237c4"
+            "certificate_hash": "db676b931edbb15755a46134f015c41de8f27f53"
           }
         },
         {
-          "client_id": "139941373279-vnce63iua8po8q8c46vc87b6ka75srfr.apps.googleusercontent.com",
+          "client_id": "924867550183-h284la8pi00nr84f5sb6lrcqunsbchch.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAhwWjAs57y_1KBtYtpTl2Dxnwl4ATbP8M"
+          "current_key": "AIzaSyAh2Wo9u4WowlXIoubmNrurQgaD3EflkcI"
         }
       ],
       "services": {
@@ -40,7 +40,7 @@
           "status": 2,
           "other_platform_oauth_client": [
             {
-              "client_id": "139941373279-vnce63iua8po8q8c46vc87b6ka75srfr.apps.googleusercontent.com",
+              "client_id": "924867550183-h284la8pi00nr84f5sb6lrcqunsbchch.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

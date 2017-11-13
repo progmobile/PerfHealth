@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/PerfHealth.iml" filepath="$PROJECT_DIR$/PerfHealth.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PerfHealthAlpha.iml" filepath="$PROJECT_DIR$/PerfHealthAlpha.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
