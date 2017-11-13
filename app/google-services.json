@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "139941373279",
+    "firebase_url": "https://perfhealth-daf87.firebaseio.com",
+    "project_id": "perfhealth-daf87",
+    "storage_bucket": "perfhealth-daf87.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:139941373279:android:b56af54ebed9aa7b",
+        "android_client_info": {
+          "package_name": "com.example.quentindoucet.perfhealth"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "139941373279-6f880hs3kpb38d72q9pn5la8j973g5uo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.quentindoucet.perfhealth",
+            "certificate_hash": "098dcf14bd5fe1bd85ce784013075b3dfc3237c4"
+          }
+        },
+        {
+          "client_id": "139941373279-vnce63iua8po8q8c46vc87b6ka75srfr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAhwWjAs57y_1KBtYtpTl2Dxnwl4ATbP8M"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "139941373279-vnce63iua8po8q8c46vc87b6ka75srfr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
