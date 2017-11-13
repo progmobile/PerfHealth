@@ -19,6 +19,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".Repeating_activity"/>
+
+        <receiver android:name=".Notification_receiver"/>
+
     </application>
+
+
 
 </manifest>
