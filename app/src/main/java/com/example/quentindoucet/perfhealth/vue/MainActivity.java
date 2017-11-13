@@ -1,39 +1,37 @@
 package com.example.quentindoucet.perfhealth.vue;
 
-<<<<<<< HEAD:app/src/main/java/com/example/quentindoucet/perfhealth/vue/MainActivity.java
 import android.content.Intent;
-=======
-import android.app.AlarmManager;
-import android.app.PendingIntent;
-import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
->>>>>>> majid:app/src/main/java/com/example/quentindoucet/perfhealth/MainActivity.java
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.NavigationView;
+import android.support.design.widget.Snackbar;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 
-<<<<<<< HEAD:app/src/main/java/com/example/quentindoucet/perfhealth/vue/MainActivity.java
 import com.example.quentindoucet.perfhealth.R;
+import com.example.quentindoucet.perfhealth.service.PlaceService;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-=======
-import java.util.Calendar;
 
-public class MainActivity extends AppCompatActivity {
->>>>>>> majid:app/src/main/java/com/example/quentindoucet/perfhealth/MainActivity.java
-
-
-
-    private static final String TAG = "MAIN_ACTIVITY";
+    private Intent servicePlace;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
-        findViewById(R.id.button).setOnClickListener(new View.OnClickListener() {
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
             @Override
-<<<<<<< HEAD:app/src/main/java/com/example/quentindoucet/perfhealth/vue/MainActivity.java
             public void onClick(View view) {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
@@ -49,20 +47,16 @@ public class MainActivity extends AppCompatActivity {
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
+        //service de localisation
+        servicePlace = new Intent(this, PlaceService.class);
+        startService(servicePlace);
 
-     /*
-        Personne p = new Personne(1,"DOUCET","Quentin",23,"M",187,80);
-        Action a = new Action(1,"Se laver les mains", "un lavage de 30s",new Date());
-        Action aa = new Action(1,"Se brosser les dents", "Un brossage de 3min",new Date());
+    }
 
-
-        ActionManager actionManager = new ActionManager();
-        actionManager.addAction(a);
-        actionManager.addAction(aa);
-
-*/
-
-
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        stopService(servicePlace);
     }
 
     @Override
@@ -74,45 +68,47 @@ public class MainActivity extends AppCompatActivity {
             super.onBackPressed();
         }
     }
-=======
-            public void onClick(View v) {
->>>>>>> majid:app/src/main/java/com/example/quentindoucet/perfhealth/MainActivity.java
 
-                Calendar calendar = Calendar.getInstance();
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
+    }
 
-<<<<<<< HEAD:app/src/main/java/com/example/quentindoucet/perfhealth/vue/MainActivity.java
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
         }
-=======
-                calendar.set(Calendar.HOUR_OF_DAY,19);
-                calendar.set(Calendar.MINUTE,23);
-                calendar.set(Calendar.SECOND,15);
->>>>>>> majid:app/src/main/java/com/example/quentindoucet/perfhealth/MainActivity.java
 
-
-                Intent intent = new Intent(getApplicationContext(),Notification_receiver.class);
-                PendingIntent pendingIntent= PendingIntent.getBroadcast(getApplicationContext(),100,intent,PendingIntent.FLAG_UPDATE_CURRENT);
-
-<<<<<<< HEAD:app/src/main/java/com/example/quentindoucet/perfhealth/vue/MainActivity.java
-        if (id == R.id.nav_connexion) {
-            Intent connexionActivite = new Intent(MainActivity.this, SignInActivity.class);
-            // Puis on lance l'intent !
-            startActivity(connexionActivite);
-        } else if (id == R.id.nav_historique) {
-            Intent secondeActivite = new Intent(MainActivity.this, HistoriqueActivity.class);
-            // Puis on lance l'intent !
-            startActivity(secondeActivite);
-=======
-                AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
-                alarmManager.setRepeating(AlarmManager.RTC_WAKEUP,calendar.getTimeInMillis(),5000,pendingIntent);
-
-            }
-        });
->>>>>>> majid:app/src/main/java/com/example/quentindoucet/perfhealth/MainActivity.java
-
-
+        return super.onOptionsItemSelected(item);
     }
+
+    @SuppressWarnings("StatementWithEmptyBody")
+    @Override
+    public boolean onNavigationItemSelected(MenuItem item) {
+        // Handle navigation view item clicks here.
+        int id = item.getItemId();
+
+        if (id == R.id.modules) {
+            // Handle the camera action
+            Intent intent = new Intent(MainActivity.this, ModulesActivity.class);
+            startActivity(intent);
+        } else if (id == R.id.nav_place) {
+            Intent intent = new Intent(MainActivity.this, PlaceActivity.class);
+            startActivity(intent);
+        }
+
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer.closeDrawer(GravityCompat.START);
+        return true;
+    }
+
 }

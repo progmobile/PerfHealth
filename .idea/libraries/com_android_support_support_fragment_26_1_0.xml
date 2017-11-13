@@ -2,12 +2,17 @@
   <library name="com.android.support:support-fragment-26.1.0">
     <CLASSES>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/fd4fd3f418b7f5c2abeaeddfdde46cd2/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/fd4fd3f418b7f5c2abeaeddfdde46cd2/res" />
 =======
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/880468b8ec177404b11e46fd0188f227/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/880468b8ec177404b11e46fd0188f227/res" />
 >>>>>>> majid
+=======
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/c411b1d9b508e9ff0fed979c4819a65f/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/c411b1d9b508e9ff0fed979c4819a65f/jars/classes.jar!/" />
+>>>>>>> benjamin
     </CLASSES>
     <JAVADOC />
     <SOURCES>

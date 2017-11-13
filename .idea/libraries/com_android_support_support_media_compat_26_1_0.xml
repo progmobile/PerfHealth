@@ -2,12 +2,17 @@
   <library name="com.android.support:support-media-compat-26.1.0">
     <CLASSES>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/0a5fa1c01376ca1cea3467185f45064c/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/0a5fa1c01376ca1cea3467185f45064c/res" />
 =======
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/7a1109a5165f5d49d02bfbe96d2a2024/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/7a1109a5165f5d49d02bfbe96d2a2024/res" />
 >>>>>>> majid
+=======
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/789ec049af1c3632e59aa3c0726104ca/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/789ec049af1c3632e59aa3c0726104ca/jars/classes.jar!/" />
+>>>>>>> benjamin
     </CLASSES>
     <JAVADOC />
     <SOURCES>

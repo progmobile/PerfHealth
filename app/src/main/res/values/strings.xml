@@ -5,6 +5,7 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
+<<<<<<< HEAD
     <string name="title_activity_sign_in">Sign in</string>
 
     <!-- Strings related to login -->
@@ -19,4 +20,10 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
+=======
+    <string name="title_activity_place">PlaceActivity</string>
+    <string name="action">Action</string>
+    <string name="nom">Nom</string>
+    <string name="enregistrer">Enregistrer</string>
+>>>>>>> benjamin
 </resources>

@@ -2,12 +2,17 @@
   <library name="com.android.support:animated-vector-drawable-26.1.0">
     <CLASSES>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/8c517ae1237373ef2dc4a2e9bb4be1b8/res" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/8c517ae1237373ef2dc4a2e9bb4be1b8/jars/classes.jar!/" />
 =======
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/60af56471748877a3959a0eb8fc145cb/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/60af56471748877a3959a0eb8fc145cb/res" />
 >>>>>>> majid
+=======
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/3a647060846eb4daecee858ac8f5d244/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/3a647060846eb4daecee858ac8f5d244/res" />
+>>>>>>> benjamin
     </CLASSES>
     <JAVADOC />
     <SOURCES>

@@ -2,12 +2,17 @@
   <library name="com.android.support:support-compat-26.1.0">
     <CLASSES>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a0a3a0b4895672fe7f87eaf8d6ef39d8/res" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a0a3a0b4895672fe7f87eaf8d6ef39d8/jars/classes.jar!/" />
 =======
       <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/f55e80c091441267451b3720afb08085/res" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/f55e80c091441267451b3720afb08085/jars/classes.jar!/" />
 >>>>>>> majid
+=======
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/ad88ba0a8f03aa4484c7256d0917dfd5/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/ad88ba0a8f03aa4484c7256d0917dfd5/jars/classes.jar!/" />
+>>>>>>> benjamin
     </CLASSES>
     <JAVADOC />
     <SOURCES>

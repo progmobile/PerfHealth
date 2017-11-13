@@ -2,12 +2,17 @@
   <library name="com.android.support.test.espresso:espresso-core-3.0.1">
     <CLASSES>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/espresso-core-3.0.1.aar/ecf13275c3b931bb7f97bddbbd3551f7/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/espresso-core-3.0.1.aar/ecf13275c3b931bb7f97bddbbd3551f7/res" />
 =======
       <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/espresso-core-3.0.1.aar/e002535e5679de4da020f8a1713ac662/res" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/espresso-core-3.0.1.aar/e002535e5679de4da020f8a1713ac662/jars/classes.jar!/" />
 >>>>>>> majid
+=======
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/espresso-core-3.0.1.aar/190f4ac42e1dddb49306d8764c58a9e7/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/espresso-core-3.0.1.aar/190f4ac42e1dddb49306d8764c58a9e7/jars/classes.jar!/" />
+>>>>>>> benjamin
     </CLASSES>
     <JAVADOC />
     <SOURCES>

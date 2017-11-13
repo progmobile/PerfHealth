@@ -2,10 +2,15 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.quentindoucet.perfhealth">
 
+<<<<<<< HEAD
     <!-- To auto-complete the email text field in the login form with the user's emails -->
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
+=======
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+>>>>>>> benjamin
 
     <application
         android:allowBackup="true"
@@ -25,6 +30,7 @@
             </intent-filter>
         </activity>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <activity android:name=".vue.HistoriqueActivity" />
         <activity android:name=".vue.SignInActivity" />
         <activity android:name=".vue.AccountActivity"></activity>
@@ -35,6 +41,32 @@
         <receiver android:name=".Notification_receiver"/>
 
 >>>>>>> majid
+=======
+        <activity
+            android:name=".vue.ModulesActivity"
+            android:label="Modules" />
+        <activity
+            android:name=".vue.LaverMainActivity"
+            android:label="Selaverlesmains" />
+        <activity
+            android:name=".vue.LaverDentsActivity"
+            android:label="Selaverlesdents"></activity>
+        <activity
+            android:name=".vue.PlaceActivity"
+            android:label="@string/title_activity_place"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".vue.NewPlaceActivity" />
+        <activity android:name=".vue.UpdatePlaceActivity" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBatLsjMBeQn4X-SuJ2CZYoPcBEBr-bwHU" />
+
+        <service
+            android:name=".service.PlaceService"
+            android:enabled="true"
+            android:exported="true"/>
+>>>>>>> benjamin
     </application>
 
 
