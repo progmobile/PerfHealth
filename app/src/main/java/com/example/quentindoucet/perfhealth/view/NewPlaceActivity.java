@@ -1,4 +1,4 @@
-package com.example.quentindoucet.perfhealth.vue;
+package com.example.quentindoucet.perfhealth.view;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
@@ -13,7 +13,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.example.quentindoucet.perfhealth.R;
-import com.example.quentindoucet.perfhealth.controleur.PlacesManager;
+import com.example.quentindoucet.perfhealth.controler.PlacesManager;
 import com.example.quentindoucet.perfhealth.model.Place;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;

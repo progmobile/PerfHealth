@@ -10,7 +10,7 @@ import android.os.IBinder;
 import android.util.Log;
 import android.widget.Toast;
 
-import com.example.quentindoucet.perfhealth.controleur.PlacesManager;
+import com.example.quentindoucet.perfhealth.controler.PlacesManager;
 import com.example.quentindoucet.perfhealth.model.Place;
 import com.example.quentindoucet.perfhealth.model.Places;
 

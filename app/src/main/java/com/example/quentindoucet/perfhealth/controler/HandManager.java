@@ -1,4 +1,4 @@
-package com.example.quentindoucet.perfhealth.controleur;
+package com.example.quentindoucet.perfhealth.controler;
 
 import com.example.quentindoucet.perfhealth.model.Hand;
 import com.google.firebase.database.ChildEventListener;

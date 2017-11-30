@@ -1,14 +1,10 @@
-package com.example.quentindoucet.perfhealth.vue;
+package com.example.quentindoucet.perfhealth.view;
 
-import android.database.MatrixCursor;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
-import android.widget.Adapter;
 import android.widget.ListAdapter;
 import android.widget.ListView;
-import android.widget.SimpleCursorAdapter;
 import android.widget.TextView;
 
 import com.example.quentindoucet.perfhealth.R;
@@ -16,10 +12,9 @@ import com.example.quentindoucet.perfhealth.controler.ActionManager;
 import com.example.quentindoucet.perfhealth.model.Action;
 import com.example.quentindoucet.perfhealth.model.Historique;
 import com.example.quentindoucet.perfhealth.model.Personne;
-import com.firebase.client.Firebase;
 
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
+
 import com.firebase.ui.database.FirebaseListAdapter;
 
 

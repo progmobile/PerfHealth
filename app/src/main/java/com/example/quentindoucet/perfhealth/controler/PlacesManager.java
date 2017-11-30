@@ -1,4 +1,4 @@
-package com.example.quentindoucet.perfhealth.controleur;
+package com.example.quentindoucet.perfhealth.controler;
 
 import android.location.Location;
 

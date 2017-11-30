@@ -1,4 +1,4 @@
-package com.example.quentindoucet.perfhealth.vue;
+package com.example.quentindoucet.perfhealth.view;
 
 import android.app.NotificationManager;
 import android.app.PendingIntent;

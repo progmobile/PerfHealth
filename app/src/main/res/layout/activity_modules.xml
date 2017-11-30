@@ -6,7 +6,7 @@
     android:layout_height="fill_parent"
     android:baselineAligned="false"
     android:orientation="vertical"
-    tools:context="com.example.quentindoucet.perfhealth.vue.ModulesActivity">
+    tools:context="com.example.quentindoucet.perfhealth.view.ModulesActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"

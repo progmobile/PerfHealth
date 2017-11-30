@@ -1,4 +1,4 @@
-package com.example.quentindoucet.perfhealth.vue;
+package com.example.quentindoucet.perfhealth.view;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,7 +14,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.quentindoucet.perfhealth.R;
-import com.example.quentindoucet.perfhealth.controleur.PlacesManager;
+import com.example.quentindoucet.perfhealth.controler.PlacesManager;
 import com.example.quentindoucet.perfhealth.model.Place;
 import com.firebase.ui.database.FirebaseListAdapter;
 

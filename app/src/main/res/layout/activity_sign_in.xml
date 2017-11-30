@@ -5,7 +5,7 @@
     android:id="@+id/signIn"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.quentindoucet.perfhealth.vue.SignInActivity">
+    tools:context="com.example.quentindoucet.perfhealth.view.SignInActivity">
 
     <com.google.android.gms.common.SignInButton
         android:id="@+id/googleBtn"
