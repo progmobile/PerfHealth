@@ -60,16 +60,16 @@ public class MainActivity extends AppCompatActivity
 
                 Calendar calendar = Calendar.getInstance();
 
-                calendar.set(Calendar.HOUR_OF_DAY,15);
-                calendar.set(Calendar.MINUTE,44);
-                calendar.set(Calendar.SECOND,15);
+                calendar.set(Calendar.HOUR_OF_DAY,16);
+                calendar.set(Calendar.MINUTE,30);
+                calendar.set(Calendar.SECOND,0);
 
 
                 Intent intent = new Intent(getApplicationContext(),Notification_receiver.class);
                 PendingIntent pendingIntent= PendingIntent.getBroadcast(getApplicationContext(),100,intent,PendingIntent.FLAG_UPDATE_CURRENT);
 
                 AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
-                alarmManager.setRepeating(AlarmManager.RTC_WAKEUP,calendar.getTimeInMillis(),5000,pendingIntent);
+                alarmManager.setRepeating(AlarmManager.RTC_WAKEUP,calendar.getTimeInMillis(),AlarmManager.INTERVAL_DAY,pendingIntent);
 
             }
         });
