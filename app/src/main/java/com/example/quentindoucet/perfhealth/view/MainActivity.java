@@ -136,7 +136,6 @@ public class MainActivity extends AppCompatActivity
             Intent secondeActivite = new Intent(MainActivity.this, HistoriqueActivity.class);
             // Puis on lance l'intent !
             startActivity(secondeActivite);
-
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

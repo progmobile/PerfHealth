@@ -106,6 +106,7 @@ public class SignInActivity extends AppCompatActivity {
             } else {
                 // Google Sign In failed, update UI appropriately
                 // ...
+                Log.wtf("Erreur auth", "Pas de connexion"+result.getStatus());
             }
         }
     }
