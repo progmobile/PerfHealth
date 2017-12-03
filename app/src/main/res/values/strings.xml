@@ -25,5 +25,7 @@
     <string name="action">Action</string>
     <string name="nom">Nom</string>
     <string name="enregistrer">Enregistrer</string>
+    <string name="replyYes_label">Oui</string>
+    <string name="replyNo_label">Non</string>
 
 </resources>

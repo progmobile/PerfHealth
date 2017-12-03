@@ -85,10 +85,18 @@ public class PlacesManager {
 
     public Places compare(Location location) {
         Places places = new Places();
-        for (Iterator<Place> i = list.iterator(); i.hasNext(); ) {
-            Place place = i.next();
+        for (Place place : list) {
             if (LocationUtile.distance(location.getLatitude(), location.getLongitude(), place.getLocation().latitude, place.getLocation().longitude) < 0.1) {
                 places.add(place);
+            }
+        }
+        return places;
+    }
+    public Places compare(Location location, Places places) {
+
+        for (Place place : list) {
+            if (!(LocationUtile.distance(location.getLatitude(), location.getLongitude(), place.getLocation().latitude, place.getLocation().longitude) < 0.1)) {
+                places.remove(place);
             }
         }
         return places;

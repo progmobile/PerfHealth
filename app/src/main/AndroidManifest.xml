@@ -2,15 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.quentindoucet.perfhealth">
 
-
     <!-- To auto-complete the email text field in the login form with the user's emails -->
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
-
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-
 
     <application
         android:allowBackup="true"
@@ -29,16 +26,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity android:name=".view.HistoriqueActivity" />
         <activity android:name=".view.SignInActivity" />
-        <activity android:name=".view.AccountActivity"></activity>
+        <activity android:name=".view.AccountActivity" />
+        <activity android:name=".view.Repeating_activity" />
 
-
-        <activity android:name=".view.Repeating_activity"/>
-
-        <receiver android:name=".view.Notification_receiver"/>
-
+        <receiver android:name=".view.Notification_receiver" />
 
         <activity
             android:name=".view.ModulesActivity"
@@ -48,7 +41,7 @@
             android:label="Selaverlesmains" />
         <activity
             android:name=".view.LaverDentsActivity"
-            android:label="Selaverlesdents"></activity>
+            android:label="Selaverlesdents" />
         <activity
             android:name=".view.PlaceActivity"
             android:label="@string/title_activity_place"
@@ -63,10 +56,10 @@
         <service
             android:name=".service.PlaceService"
             android:enabled="true"
-            android:exported="true"/>
-
+            android:exported="true" />
+        <service
+            android:name=".service.ReplyNotification"
+            android:exported="false"></service>
     </application>
-
-
 
 </manifest>
