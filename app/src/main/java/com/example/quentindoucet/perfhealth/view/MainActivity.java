@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity
         super.onDestroy();
         if (servicePlace != null)
             stopService(servicePlace);
-        else
+        else if (PlaceService.getInstance() != null)
             PlaceService.getInstance().stopSelf();
     }
 
