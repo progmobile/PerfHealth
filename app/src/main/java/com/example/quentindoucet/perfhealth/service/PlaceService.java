@@ -144,6 +144,7 @@ public class PlaceService extends Service {
     public void onDestroy() {
         Log.e(TAG, "onDestroy");
         super.onDestroy();
+        mNotificationManager.cancel(mNotificationId);
         if (mLocationManager != null) {
             for (LocationListener mLocationListener : mLocationListeners) {
                 try {
