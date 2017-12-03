@@ -65,6 +65,7 @@ public class ActionManager {
     }
 
     public void addAction(Action action) {
+        Log.wtf("Action add", action.toString());
         listAction.add(action);
         myRef.child("action").setValue(listAction);
     }

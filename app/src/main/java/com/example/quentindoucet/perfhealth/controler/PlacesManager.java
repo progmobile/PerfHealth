@@ -92,4 +92,13 @@ public class PlacesManager {
         }
         return places;
     }
+    public Places compare(Location location, Places places) {
+
+        for (Place place : list) {
+            if (!(LocationUtile.distance(location.getLatitude(), location.getLongitude(), place.getLocation().latitude, place.getLocation().longitude) < 0.1)) {
+                places.remove(place);
+            }
+        }
+        return places;
+    }
 }
