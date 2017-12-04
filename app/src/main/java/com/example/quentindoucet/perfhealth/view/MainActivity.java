@@ -5,12 +5,10 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-<<<<<<< HEAD:app/src/main/java/com/example/quentindoucet/perfhealth/view/MainActivity.java
-=======
+
 import android.support.design.widget.Snackbar;
 import android.util.Log;
 import android.view.View;
->>>>>>> Quentin:app/src/main/java/com/example/quentindoucet/perfhealth/vue/MainActivity.java
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;
 import android.support.v4.view.GravityCompat;
@@ -20,7 +18,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-<<<<<<< HEAD:app/src/main/java/com/example/quentindoucet/perfhealth/view/MainActivity.java
 import android.view.View;
 import android.app.AlarmManager;
 import android.app.PendingIntent;
@@ -29,7 +26,7 @@ import java.util.Calendar;
 
 import com.example.quentindoucet.perfhealth.R;
 import com.example.quentindoucet.perfhealth.service.PlaceService;
-=======
+
 import android.widget.TextView;
 
 import com.example.quentindoucet.perfhealth.R;
@@ -45,7 +42,6 @@ import com.facebook.login.widget.LoginButton;
 import com.facebook.login.widget.ProfilePictureView;
 
 import java.net.URI;
->>>>>>> Quentin:app/src/main/java/com/example/quentindoucet/perfhealth/vue/MainActivity.java
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -81,7 +77,6 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-<<<<<<< HEAD:app/src/main/java/com/example/quentindoucet/perfhealth/view/MainActivity.java
         //service de localisation
         if (PlaceService.getInstance() == null) {
             servicePlace = new Intent(this, PlaceService.class);
@@ -105,7 +100,7 @@ public class MainActivity extends AppCompatActivity
 
                 AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
                 //  alarmManager.setRepeating(AlarmManager.RTC_WAKEUP,calendar.getTimeInMillis(),AlarmManager.INTERVAL_DAY,pendingIntent);
-=======
+
         /*
         Personne p = new Personne(1,"DOUCET","Quentin",23,"M",187,80);
         Action a = new Action(1,"Se laver les mains", "un lavage de 30s",new Date());
@@ -162,12 +157,11 @@ public class MainActivity extends AppCompatActivity
 
             @Override
             public void onError(FacebookException error) {
->>>>>>> Quentin:app/src/main/java/com/example/quentindoucet/perfhealth/vue/MainActivity.java
 
             }
         });
 
-<<<<<<< HEAD:app/src/main/java/com/example/quentindoucet/perfhealth/view/MainActivity.java
+        accessTokenTracker.startTracking();
 
     }
 
@@ -178,14 +172,11 @@ public class MainActivity extends AppCompatActivity
             stopService(servicePlace);
         else if (PlaceService.getInstance() != null)
             PlaceService.getInstance().stopSelf();
-=======
-        accessTokenTracker.startTracking();
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         callbackManager.onActivityResult(requestCode, resultCode, data);
->>>>>>> Quentin:app/src/main/java/com/example/quentindoucet/perfhealth/vue/MainActivity.java
     }
 
     @Override

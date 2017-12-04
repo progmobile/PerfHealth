@@ -6,12 +6,12 @@
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
-<<<<<<< HEAD
+
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-=======
+
     <uses-permission android:name="android.permission.INTERNET"/>
->>>>>>> Quentin
+
 
     <application
         android:allowBackup="true"
@@ -48,7 +48,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-<<<<<<< HEAD
+
         <activity android:name=".view.HistoriqueActivity" />
         <activity android:name=".view.SignInActivity" />
         <activity android:name=".view.AccountActivity" />
@@ -89,14 +89,15 @@
 
 
         <activity android:name=".view.NotifResponseActivity"></activity>
-=======
+
         <activity android:name=".vue.HistoriqueActivity" />
         <activity android:name=".vue.SignInActivity" />
         <activity android:name=".vue.AccountActivity"></activity>
 
 
         <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
->>>>>>> Quentin
+
+        
     </application>
 
 </manifest>
