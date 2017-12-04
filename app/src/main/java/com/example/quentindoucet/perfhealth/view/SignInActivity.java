@@ -5,10 +5,16 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.example.quentindoucet.perfhealth.R;
+import com.facebook.FacebookCallback;
+import com.facebook.FacebookException;
+import com.facebook.login.LoginResult;
+import com.facebook.login.widget.LoginButton;
 import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
@@ -103,10 +109,15 @@ public class SignInActivity extends AppCompatActivity {
                 // Google Sign In was successful, authenticate with Firebase
                 GoogleSignInAccount account = result.getSignInAccount();
                 firebaseAuthWithGoogle(account);
+
             } else {
                 // Google Sign In failed, update UI appropriately
                 // ...
+<<<<<<< HEAD:app/src/main/java/com/example/quentindoucet/perfhealth/view/SignInActivity.java
                 Log.wtf("Erreur auth", "Pas de connexion"+result.getStatus());
+=======
+                Log.wtf("Erreur co","Erreur dcd");
+>>>>>>> Quentin:app/src/main/java/com/example/quentindoucet/perfhealth/vue/SignInActivity.java
             }
         }
     }
@@ -133,6 +144,8 @@ public class SignInActivity extends AppCompatActivity {
                     }
                 });
     }
+
+
 
 
 }
