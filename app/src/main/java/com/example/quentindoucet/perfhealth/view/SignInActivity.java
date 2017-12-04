@@ -113,11 +113,7 @@ public class SignInActivity extends AppCompatActivity {
             } else {
                 // Google Sign In failed, update UI appropriately
                 // ...
-<<<<<<< HEAD:app/src/main/java/com/example/quentindoucet/perfhealth/view/SignInActivity.java
                 Log.wtf("Erreur auth", "Pas de connexion"+result.getStatus());
-=======
-                Log.wtf("Erreur co","Erreur dcd");
->>>>>>> Quentin:app/src/main/java/com/example/quentindoucet/perfhealth/vue/SignInActivity.java
             }
         }
     }
