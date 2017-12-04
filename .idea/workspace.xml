@@ -6,23 +6,8 @@
     </shared>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0eff94b1-20d1-4bcd-9adf-e76b1acdf4a7" name="Default" comment="Merge branch 'benjamin'&#10;&#10;# Conflicts:&#10;#&#9;.gradle/4.1/fileHashes/fileHashes.bin&#10;#&#9;.gradle/4.1/fileHashes/fileHashes.lock&#10;#&#9;.gradle/4.1/fileHashes/resourceHashesCache.bin&#10;#&#9;.gradle/4.1/javaCompile/classAnalysis.bin&#10;#&#9;.gradle/4.1/javaCompile/jarAnalysis.bin&#10;#&#9;.gradle/4.1/javaCompile/javaCompile.lock&#10;#&#9;.gradle/4.1/javaCompile/taskHistory.bin&#10;#&#9;.gradle/4.1/javaCompile/taskJars.bin&#10;#&#9;.gradle/4.1/taskHistory/fileSnapshots.bin&#10;#&#9;.gradle/4.1/taskHistory/taskHistory.bin&#10;#&#9;.gradle/4.1/taskHistory/taskHistory.lock&#10;#&#9;.idea/libraries/com_google_android_gms_play_services_maps_11_4_2.xml&#10;#&#9;.idea/libraries/com_google_android_gms_play_services_maps_license_11_4_2.xml&#10;#&#9;.idea/workspace.xml&#10;#&#9;app/build.gradle&#10;#&#9;app/src/main/AndroidManifest.xml">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/fileHashes/resourceHashesCache.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/fileHashes/resourceHashesCache.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/javaCompile/classAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/javaCompile/classAnalysis.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/javaCompile/jarAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/javaCompile/jarAnalysis.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/javaCompile/javaCompile.lock" afterPath="$PROJECT_DIR$/.gradle/4.1/javaCompile/javaCompile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/javaCompile/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/javaCompile/taskHistory.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/javaCompile/taskJars.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/javaCompile/taskJars.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.lock" />
+    <list default="true" id="0eff94b1-20d1-4bcd-9adf-e76b1acdf4a7" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/quentindoucet/perfhealth/controler/Nouveau_ModuleManager.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/quentindoucet/perfhealth/controler/Nouveau_ModuleManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/quentindoucet/perfhealth/view/ModulesActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/quentindoucet/perfhealth/view/ModulesActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/quentindoucet/perfhealth/view/Nouveau_ModuleActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/quentindoucet/perfhealth/view/Nouveau_ModuleActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/quentindoucet/perfhealth/view/UpdateModuleActivituy.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/quentindoucet/perfhealth/view/UpdateModuleActivituy.java" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -2420,7 +2405,7 @@
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
       <method>
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1512355798921" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1512355824245" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -2467,7 +2452,7 @@
         <option name="ADVANCED_PROFILING_ENABLED" value="false" />
       </Profilers>
       <method>
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1512355798921" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1512355824245" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -2649,7 +2634,7 @@
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
       <method>
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1512355798923" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1512355824248" />
       </method>
     </configuration>
     <list size="1">
@@ -2741,7 +2726,14 @@
       <option name="project" value="LOCAL" />
       <updated>1512355673123</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Merge branch 'benjamin'&#10;&#10;# Conflicts:&#10;#&#9;.gradle/4.1/fileHashes/fileHashes.bin&#10;#&#9;.gradle/4.1/fileHashes/fileHashes.lock&#10;#&#9;.gradle/4.1/fileHashes/resourceHashesCache.bin&#10;#&#9;.gradle/4.1/javaCompile/classAnalysis.bin&#10;#&#9;.gradle/4.1/javaCompile/jarAnalysis.bin&#10;#&#9;.gradle/4.1/javaCompile/javaCompile.lock&#10;#&#9;.gradle/4.1/javaCompile/taskHistory.bin&#10;#&#9;.gradle/4.1/javaCompile/taskJars.bin&#10;#&#9;.gradle/4.1/taskHistory/fileSnapshots.bin&#10;#&#9;.gradle/4.1/taskHistory/taskHistory.bin&#10;#&#9;.gradle/4.1/taskHistory/taskHistory.lock&#10;#&#9;.idea/libraries/com_google_android_gms_play_services_maps_11_4_2.xml&#10;#&#9;.idea/libraries/com_google_android_gms_play_services_maps_license_11_4_2.xml&#10;#&#9;.idea/workspace.xml&#10;#&#9;app/build.gradle&#10;#&#9;app/src/main/AndroidManifest.xml">
+      <created>1512355814471</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1512355814471</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
