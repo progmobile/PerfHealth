@@ -24,6 +24,7 @@ import com.example.quentindoucet.perfhealth.model.Action;
 import com.example.quentindoucet.perfhealth.model.Place;
 import com.example.quentindoucet.perfhealth.model.Places;
 import com.example.quentindoucet.perfhealth.view.MainActivity;
+import com.example.quentindoucet.perfhealth.view.NotifResponseActivity;
 
 import java.util.Date;
 import java.util.Iterator;
@@ -97,7 +98,7 @@ public class PlaceService extends Service {
                         .setContentTitle("My notification")
                         .setContentText("Hello World!");
         // Creates an explicit intent for an Activity in your app
-        Intent resultIntent = new Intent(this, MainActivity.class);
+        Intent resultIntent = new Intent(this, NotifResponseActivity.class);
 
         // The stack builder object will contain an artificial back stack for the
         // started Activity.
@@ -143,6 +144,7 @@ public class PlaceService extends Service {
     public void onDestroy() {
         Log.e(TAG, "onDestroy");
         super.onDestroy();
+        mNotificationManager.cancel(mNotificationId);
         if (mLocationManager != null) {
             for (LocationListener mLocationListener : mLocationListeners) {
                 try {
@@ -187,6 +189,26 @@ public class PlaceService extends Service {
                 action.set(0, place.getAction(), place.getAction() + " à " + place.getName(), new Date());
                 replyYesPendingIntent = PendingIntent.getService(getApplicationContext(), 0, replyYesIntent,
                         PendingIntent.FLAG_UPDATE_CURRENT);
+
+                Intent resultIntent = new Intent(PlaceService.this, NotifResponseActivity.class)
+                        .putExtra("value", action);
+
+                // The stack builder object will contain an artificial back stack for the
+                // started Activity.
+                // This ensures that navigating backward from the Activity leads out of
+                // your app to the Home screen.
+                TaskStackBuilder stackBuilder = TaskStackBuilder.create(PlaceService.this);
+                // Adds the back stack for the Intent (but not the Intent itself)
+                stackBuilder.addParentStack(MainActivity.class);
+                // Adds the Intent that starts the Activity to the top of the stack
+                stackBuilder.addNextIntent(resultIntent);
+                PendingIntent resultPendingIntent =
+                        stackBuilder.getPendingIntent(
+                                0,
+                                PendingIntent.FLAG_UPDATE_CURRENT
+                        );
+                mBuilder.setContentIntent(resultPendingIntent);
+
                 // mNotificationId is a unique integer your app uses to identify the
                 // notification. For example, to cancel the notification, you can pass its ID
                 // number to NotificationManager.cancel().

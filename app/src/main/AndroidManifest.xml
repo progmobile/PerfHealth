@@ -61,9 +61,11 @@
             android:name=".service.ReplyNotification"
             android:exported="false"></service>
 
-        <activity android:name=".vue.Nouveau_ModuleActivity"></activity>
-        <activity android:name=".vue.UpdateModuleActivituy"></activity>
+        <activity android:name=".view.Nouveau_ModuleActivity"></activity>
+        <activity android:name=".view.UpdateModuleActivituy"></activity>
 
+
+        <activity android:name=".view.NotifResponseActivity"></activity>
     </application>
 
 </manifest>
