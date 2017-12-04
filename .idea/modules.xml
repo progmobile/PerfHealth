@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://C:\Users\alexi\AndroidStudioProjects\PerfHealth-final\PerfHealth.iml" filepath="C:\Users\alexi\AndroidStudioProjects\PerfHealth-final\PerfHealth.iml" />
       <module fileurl="file://$PROJECT_DIR$/PerfHealth-final.iml" filepath="$PROJECT_DIR$/PerfHealth-final.iml" />
-      <module fileurl="file://C:\Users\alexi\AndroidStudioProjects\PerfHealth-final\PerfHealthAlpha.iml" filepath="C:\Users\alexi\AndroidStudioProjects\PerfHealth-final\PerfHealthAlpha.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
