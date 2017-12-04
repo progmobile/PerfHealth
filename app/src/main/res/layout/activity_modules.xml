@@ -1,74 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:baselineAligned="false"
     android:orientation="vertical"
     tools:context="com.example.benjamin.perfessaimac.ModulesActivity">
 
-    <RelativeLayout
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/button_lavagedemain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/button2"
+            android:onClick="switchLaverDents"
+            android:text="Se brosser les dents" />
 
         <Button
             android:id="@+id/button2"
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
             android:onClick="switchLaverMains"
-            android:text="SeLaverlesMains" />
-    </RelativeLayout>
+            android:text="Se laver les mains" />
+
+        <ListView
+            android:id="@+id/listeView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/button_add"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_marginBottom="18dp"
-        android:layout_marginEnd="35dp"
-        android:layout_marginRight="35dp"
-        android:clickable="true"
-        android:onClick="ajouterModule"
+        android:onClick="add_module"
         app:backgroundTint="@android:color/holo_blue_light"
         app:fabSize="normal"
         app:srcCompat="@drawable/ic_playlist_add_black_24dp"
-        />
+        tools:layout_editor_absoluteX="303dp"
+        tools:layout_editor_absoluteY="413dp" />
 
-    <Button
-        android:id="@+id/button_lavagedemain"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="50dp"
-        android:onClick="switchLaverDents"
-        android:text="SEBROSSERLESDENTS" />
+</android.support.constraint.ConstraintLayout>
 
-</RelativeLayout>
-
-   <!-- <Button
-        android:id="@+id/premier"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="Se laver les mains"/>
-
-    <Button
-        android:id="@+id/deuxieme"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="Se laver les oreilles"/>
-
-    <Button
-        android:id="@+id/troisieme"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="machin machin"/> -->
 
 
 
