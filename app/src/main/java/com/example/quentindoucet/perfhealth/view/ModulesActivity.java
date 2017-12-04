@@ -10,7 +10,7 @@ import android.widget.ListView;
 import android.widget.RelativeLayout;
 
 import com.example.quentindoucet.perfhealth.R;
-import com.example.quentindoucet.perfhealth.controleur.Nouveau_ModuleManager;
+import com.example.quentindoucet.perfhealth.controler.Nouveau_ModuleManager;
 import com.example.quentindoucet.perfhealth.model.Nouveau_module;
 import com.firebase.ui.database.FirebaseListAdapter;
 

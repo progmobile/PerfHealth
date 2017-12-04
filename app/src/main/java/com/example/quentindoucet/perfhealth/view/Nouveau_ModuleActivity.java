@@ -1,4 +1,4 @@
-package com.example.quentindoucet.perfhealth.vue;
+package com.example.quentindoucet.perfhealth.view;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -8,7 +8,7 @@ import android.widget.EditText;
 import android.widget.NumberPicker;
 
 import com.example.quentindoucet.perfhealth.R;
-import com.example.quentindoucet.perfhealth.controleur.Nouveau_ModuleManager;
+import com.example.quentindoucet.perfhealth.controler.Nouveau_ModuleManager;
 import com.example.quentindoucet.perfhealth.model.Nouveau_module;
 
 public class Nouveau_ModuleActivity extends AppCompatActivity {
