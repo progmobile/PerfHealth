@@ -1,16 +1,12 @@
 package com.example.quentindoucet.perfhealth.view;
 
-import android.app.DownloadManager;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 
 import android.support.design.widget.Snackbar;
-import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
-import android.support.design.widget.Snackbar;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -18,7 +14,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.app.AlarmManager;
 import android.app.PendingIntent;
 
@@ -29,19 +24,15 @@ import com.example.quentindoucet.perfhealth.service.PlaceService;
 
 import android.widget.TextView;
 
-import com.example.quentindoucet.perfhealth.R;
 import com.facebook.AccessToken;
 import com.facebook.AccessTokenTracker;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
-import com.facebook.FacebookSdk;
 import com.facebook.Profile;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
 import com.facebook.login.widget.ProfilePictureView;
-
-import java.net.URI;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -233,6 +224,10 @@ public class MainActivity extends AppCompatActivity
             Intent secondeActivite = new Intent(MainActivity.this, HistoriqueActivity.class);
             // Puis on lance l'intent !
             startActivity(secondeActivite);
+        } else if (id == R.id.rappels) {
+            Intent rappelActivite = new Intent(MainActivity.this, NotifActivity.class);
+            // Puis on lance l'intent !
+            startActivity(rappelActivite);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

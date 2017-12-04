@@ -27,6 +27,13 @@
         completions."
     </string>
 
+
+    <string-array name="ringtoneList">
+        <item>Réveil</item>
+        <item>René la taupe</item>
+        <item>Je suis pas venue ici pour souffir OK ?"</item>
+    </string-array>
+
     <string name="title_activity_place">PlaceActivity</string>
     <string name="action">Action</string>
     <string name="nom">Nom</string>
