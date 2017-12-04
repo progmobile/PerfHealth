@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity
             startService(servicePlace);
         }
 
-
+/*
         findViewById(R.id.button).setOnClickListener(new View.OnClickListener() {
                                                          @Override
                                                          public void onClick(View v) {
@@ -93,7 +93,7 @@ public class MainActivity extends AppCompatActivity
                                                              //  alarmManager.setRepeating(AlarmManager.RTC_WAKEUP,calendar.getTimeInMillis(),AlarmManager.INTERVAL_DAY,pendingIntent);
                                                          }
                                                      });
-
+*/
                 /*
         Personne p = new Personne(1,"DOUCET","Quentin",23,"M",187,80);
         Action a = new Action(1,"Se laver les mains", "un lavage de 30s",new Date());
