@@ -60,6 +60,10 @@
         <service
             android:name=".service.ReplyNotification"
             android:exported="false"></service>
+
+        <activity android:name=".vue.Nouveau_ModuleActivity"></activity>
+        <activity android:name=".vue.UpdateModuleActivituy"></activity>
+
     </application>
 
 </manifest>
