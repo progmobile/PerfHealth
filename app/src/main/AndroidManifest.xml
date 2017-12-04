@@ -30,7 +30,7 @@
             android:label="Selaverlesmains" />
         <activity
             android:name=".vue.LaverDentsActivity"
-            android:label="Selaverlesdents" />
+            android:label="Selaverlesdents"></activity>
         <activity
             android:name=".vue.PlaceActivity"
             android:label="@string/title_activity_place"
@@ -45,7 +45,8 @@
         <service
             android:name=".service.PlaceService"
             android:enabled="true"
-            android:exported="true" />
+            android:exported="true"/>
+
 
         <activity android:name=".vue.Nouveau_ModuleActivity"></activity>
         <activity android:name=".vue.UpdateModuleActivituy"></activity>

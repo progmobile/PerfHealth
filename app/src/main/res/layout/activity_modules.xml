@@ -7,7 +7,7 @@
     android:layout_height="fill_parent"
     android:baselineAligned="false"
     android:orientation="vertical"
-    tools:context="com.example.benjamin.perfessaimac.ModulesActivity">
+    tools:context="com.example.quentindoucet.perfhealth.vue.ModulesActivity">
 
 
     <LinearLayout
