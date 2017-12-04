@@ -7,8 +7,12 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_sign_in">Sign in</string>
 
-    <string name="facebook_app_id">ID app facebook</string>
-    
+
+    <string name="facebook_app_id">197415180833045</string>
+    <string name="fb_login_protocol_scheme">fb197415180833045</string>
+    <string name="com_facebook_loginview_log_in_button">Connexion avec Facebook</string>
+    <string name="com_facebook_loginview_log_out_button">Déconnexion</string>
+
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password (optional)</string>

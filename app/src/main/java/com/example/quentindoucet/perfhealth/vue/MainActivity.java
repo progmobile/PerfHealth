@@ -1,9 +1,12 @@
 package com.example.quentindoucet.perfhealth.vue;
 
+import android.app.DownloadManager;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -13,8 +16,21 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 import com.example.quentindoucet.perfhealth.R;
+import com.facebook.AccessToken;
+import com.facebook.AccessTokenTracker;
+import com.facebook.CallbackManager;
+import com.facebook.FacebookCallback;
+import com.facebook.FacebookException;
+import com.facebook.FacebookSdk;
+import com.facebook.Profile;
+import com.facebook.login.LoginResult;
+import com.facebook.login.widget.LoginButton;
+import com.facebook.login.widget.ProfilePictureView;
+
+import java.net.URI;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -22,6 +38,10 @@ public class MainActivity extends AppCompatActivity
 
 
     private static final String TAG = "MAIN_ACTIVITY";
+
+    private LoginButton loginButton;
+    private TextView textView;
+    private CallbackManager callbackManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,20 +68,72 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-
-     /*
+        /*
         Personne p = new Personne(1,"DOUCET","Quentin",23,"M",187,80);
         Action a = new Action(1,"Se laver les mains", "un lavage de 30s",new Date());
         Action aa = new Action(1,"Se brosser les dents", "Un brossage de 3min",new Date());
 
-
         ActionManager actionManager = new ActionManager();
         actionManager.addAction(a);
         actionManager.addAction(aa);
+        */
 
-*/
+        loginButton = (LoginButton)findViewById(R.id.login_button);
+        textView = (TextView)findViewById(R.id.textView2);
+
+        Profile profile = Profile.getCurrentProfile();
+        ProfilePictureView profileImage = (ProfilePictureView) findViewById(R.id.profilePicture);
+        try {
+            profileImage.setProfileId(profile.getId());
+            textView.setText(profile.getName());
+        }catch (NullPointerException npe){
+            npe.getMessage();
+        }
 
 
+        AccessTokenTracker accessTokenTracker = new AccessTokenTracker() {
+            @Override
+            protected void onCurrentAccessTokenChanged(AccessToken oldAccessToken,
+                                                       AccessToken currentAccessToken) {
+                if (currentAccessToken == null) {
+                    Log.d(TAG, "onLogout catched");
+                    Profile profile = Profile.getCurrentProfile();
+                    ProfilePictureView profileImage = (ProfilePictureView) findViewById(R.id.profilePicture);
+                    profileImage.setProfileId(null);
+                    textView.setText("");
+                }
+            }
+        };
+
+
+        callbackManager = CallbackManager.Factory.create();
+
+        loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
+            @Override
+            public void onSuccess(LoginResult loginResult) {
+                Profile profile = Profile.getCurrentProfile();
+                ProfilePictureView profileImage = (ProfilePictureView) findViewById(R.id.profilePicture);
+                profileImage.setProfileId(profile.getId());
+                textView.setText(profile.getName());
+            }
+
+            @Override
+            public void onCancel() {
+                textView.setText("Connexion Annulée");
+            }
+
+            @Override
+            public void onError(FacebookException error) {
+
+            }
+        });
+
+        accessTokenTracker.startTracking();
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        callbackManager.onActivityResult(requestCode, resultCode, data);
     }
 
     @Override
